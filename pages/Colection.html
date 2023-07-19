@@ -6,28 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡SALE!</title>
     <link rel="stylesheet" href="../styles/css/estilos.css">
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
     <link rel="icon" href="../images/logo.png">
 </head>
 <body>
     <header >
-        <nav>
-            <div class="contenedor-nav">
-                <a href="../index.html">
-                    <img src="../images/logo.png"  class="logo-nav"    alt="logo de ShoesShop">
-                </a>
-                <div class="titulos">   
-                    <div class="menu-bar">      
-                        <a href="../index.html"class="menu-link">Menu</a>                            
-                        <a href="new-in.html"class="menu-link" >New in</a>
-                        <a href="#" class="menu-link">Colection</a>
-                        <a href="About-Us.html"class="menu-link">About Us</a>
-                        <a href="contact.html"class="menu-link">Contact</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">
+                <img  class="logo-nav"  src="../images/logo.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse menu-bar" id="navbarNavAltMarkup">
+                <div class="navbar-nav menu-link ">
+                  <a class="nav-link  links"  href="New-in.html">New in</a>
+                  <a class="nav-link links" href="#">Colection</a>
+                  <a class="nav-link links" href="About-Us.html">About us</a>
+                  <a class="nav-link links" href="Contact.html">Contact</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+     <main>
+        <section>
+            <h2 class="titulo-principal">Colection</h2>
+            <div class="coleccion-contenido">
+                <div class="coleccion">
+                    <div class="contenido">
+                        <h2>Adidas</h2>
+                        <p>
+                            "This collection is inspired by the urban and sporty style. the brand has many collaborations such as the Bad Bunny forum, the Adidas x "South Park" and among other shoes created by themselves.
+                            <br>
+                            Adidas have the best and latest technology in shoes.
+                            <br>
+                            They give you comfort, style and many of them are exclusive"
+
+                        </p>
                     </div>
+                <img class="logo-marcas" src="../images/logo adidas.png" alt="logo de adidas">
+                </div>
+                <div class="coleccion invertido">
+                <img class="logo-marcas" src="../images/logo nike.png" alt="logo de nike">
+                <div class="contenido">
+                    <h2>Nike</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam labore fuga maxime saepe, quam exercitationem a, consequuntur aliquam quasi in, hic magnam aut ut aspernatur voluptas mollitia quos unde sapiente?
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium alias obcaecati cupiditate, ut aperiam deserunt perferendis a officiis animi natus sint. Dolore beatae molestias soluta ratione quos corrupti dicta mollitia?
+                    </p>
+                </div>
+                </div>
+                <div class="coleccion">
+                    <div class="contenido">
+                        <h2>New balance</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ea tenetur quos optio? Obcaecati similique vitae nobis quaerat suscipit delectus, dicta fugit accusamus! Molestiae nisi quos enim corrupti illo minima?
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cupiditate natus blanditiis. Ullam ipsa necessitatibus voluptatum, possimus sequi laborum velit dicta. Dolore ab nesciunt optio voluptatibus. Atque ad ab necessitatibus?
+
+                        </p>
+                    </div>
+                <img class="logo-marcas"  src="../images/logo new balance.png" alt="logo de new balance">
                 </div>
             </div>
-        </nav>
-    </header>
-    
+        <section>
+     </main>
   
     
     <footer>
@@ -61,5 +107,6 @@
             <img class="logo-footer"   src="../images/logo.png" alt="logo">
         </div>
     </footer>
+    <script src="../styles/js/bootstrap.min.js"></script> 
 </body>
 </html>
