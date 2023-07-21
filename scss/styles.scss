@@ -1,12 +1,12 @@
 @import "colores";
-$centrar:center;
-$columnas:column;
-
-
+@import "estructura";
+@import "tipografia";
+@import "medidas";
+@import "grillas";
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: $margin;
+    padding: $padding;
     box-sizing: border-box;
 }
 
@@ -25,8 +25,8 @@ a:hover{
 
 body{
     display: flex;
-    flex-direction: column;
-    font-family: montserrat, sans-serif;
+    flex-direction: $columnas;
+    font-family: $fuente;
     padding-top: 8em;
 }
 
@@ -37,7 +37,7 @@ nav{
 
 .contenedor-nav{
     
-    display: flex;
+    display:flex;
     flex-wrap: inherit;
     align-items: $centrar;
     justify-content: space-between;
@@ -60,7 +60,7 @@ nav{
     display: flex;
     align-items: $centrar;   
     justify-content: $centrar ;
-    width: 100%;
+    width: $ancho;
     font-size: 20px;
     
  }
@@ -94,13 +94,13 @@ nav{
 
     div{
         display: flex;
-        flex-direction: column;
+        flex-direction: $columnas;
         padding: 15px;
         box-shadow: $sombreado;
     }
 
     span{
-        font-weight: 800;
+        font-weight: $grosor-letra;
         font-size: 15px;
     }
 
@@ -111,7 +111,7 @@ nav{
         padding: 10px;
         border-radius: 5px;
         text-align: $centrar;
-        font-weight: 800;
+        font-weight: $grosor-letra;
     }
     
 }
@@ -126,7 +126,7 @@ footer{
    justify-items: $centrar;
    background-color: $color-secundario;
    color: $white;
-   flex-direction: column;
+   flex-direction: $columnas;
     margin-top: 10px;
 
     div{
@@ -194,7 +194,7 @@ img{
 
     form{
         display: flex;
-        flex-direction: column;
+        flex-direction: $columnas;
     }
 }
 
@@ -242,12 +242,12 @@ h3{
         position: relative;
         overflow: hidden;
         margin-top: 5px;
-        height: 100%;
+        height: $ancho;
     }
 
     img{
-        width: 100%;
-        height: 100%;
+        width: $ancho;
+        height: $ancho;
         object-fit: cover;
     
     }
@@ -258,7 +258,7 @@ h3{
         color: $white;
         font-size: 30px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: $grosor-letra;
         
     }
 }
@@ -266,11 +266,11 @@ h3{
 
 
 .Menu div a div{
-    width: 100%;
-    height: 100%;
+    width: $ancho;
+    height: $ancho;
     position: absolute;
     top: 0;
-    margin-top: 0;
+    margin-top: $margin;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: $centrar;
@@ -295,21 +295,15 @@ h3{
     color: $color-secundario;
     text-align: $centrar; 
     font-size: 40px;
-    font-weight: 700;
+    font-weight: $grosor-letra;
    
 }
 
-.titulo-section{
-    font-size: 30PX;
-    font-weight: 700;
-    padding: 20PX ;
-    text-align: $centrar;
-    margin: 20px;
-}
+
 
 .coleccion-contenido{
     display: flex;
-    flex-direction: column;
+    flex-direction: $columnas;
 }
 
 .coleccion{
@@ -317,8 +311,8 @@ h3{
     justify-content: start;
     flex-direction: row;
     text-align: justify;
-    align-items:center;
-    padding: 0;
+    align-items:$centrar;
+    padding: $padding;
   
 }
 
@@ -327,7 +321,7 @@ h3{
     h2{
         text-align: $centrar;
         margin-bottom: 30px;
-        font-weight: 700;
+        font-weight: $grosor-letra;
     }
 
     p{
@@ -348,24 +342,24 @@ h3{
 
 @media screen and (max-width:768px) {
     .titulos{
-        width: 100%;
+        width: $ancho;
     }
     
     footer{
         display: flex;
-        flex-direction: column;
+        flex-direction: $columnas;
 
-        width: 100%;
+        width: $ancho;
     }
 
     .Menu{
         display: flex;
-        flex-direction: column;
-        width: 100%;
+        flex-direction: $columnas;
+        width: $ancho;
        
     }
     .titulo-principal{
-        width: 100%;
+        width: $ancho;
     }
     .redes-container{
         display: flex;
@@ -377,7 +371,7 @@ h3{
   }
 
   .zapatillas{
-    width: 100%;
+    width: $ancho;
   }
 }
 
@@ -393,7 +387,7 @@ h3{
 @media screen and (max-width:768px) {
     .coleccion{
         display: flex;
-        flex-direction: column;
+        flex-direction: $columnas;
 
     }
 
