@@ -91,6 +91,7 @@ nav{
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 25px;
     padding: 0 10px 25px;
+    
 
     div{
         display: flex;
@@ -137,9 +138,16 @@ footer{
 
     p{
         text-align: $centrar;
+        margin: $margin;
     }
 }
 
+.footer-contacto{
+    display: flex;
+    align-items: $centrar;
+    justify-content: $centrar;
+
+}
 
 .telefono-img{
     width: 30px;
@@ -222,13 +230,29 @@ img{
 .nosotros{
     text-align: justify;
     min-height: 90vh;
+    h3{
+        color:$color-secundario ;
+        text-align: $centrar;
+        padding: 20px 0 10px;
+        font-size: 50px;
+    }
+    p{
+        margin: 40px;
+        font-size: 20px;
+      
+    }
 }
 
-h3{
-    color:$color-primario ;
-    text-align: $centrar;
-    padding: 20px 0 10px;
-    font-size: 50px;
+.slogan{   
+    display: flex;
+    justify-content: $centrar;
+    align-items: $centrar;
+    img{
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+
+    }
 }
 
 
@@ -348,7 +372,7 @@ h3{
     footer{
         display: flex;
         flex-direction: $columnas;
-
+        height: $ancho;
         width: $ancho;
     }
 
@@ -372,6 +396,12 @@ h3{
 
   .zapatillas{
     width: $ancho;
+  }
+
+  .slogan{
+    img{
+        width: $ancho;
+    }
   }
 }
 
