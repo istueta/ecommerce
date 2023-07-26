@@ -354,9 +354,7 @@ img{
     justify-content: right;
   }
 
-  .zapatillas{
-    width: $ancho;
-  }
+  
 
   .slogan{
     img{
@@ -377,6 +375,9 @@ img{
         @include espacio(0,30px);
     }
    
+    .zapatillas{
+        @include sizes(350px,auto);
+    }
 }
 
 

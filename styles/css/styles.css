@@ -360,9 +360,6 @@ img {
   .menu-bar {
     justify-content: right;
   }
-  .zapatillas {
-    width: 100%;
-  }
   .slogan img {
     width: 100%;
   }
@@ -381,6 +378,10 @@ img {
   .contenido {
     margin: 0;
     padding: 30px;
+  }
+  .zapatillas {
+    width: 350px;
+    height: auto;
   }
 }
 @media screen and (max-width: 1245px) {
