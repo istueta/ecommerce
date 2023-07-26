@@ -1,4 +1,425 @@
-$padding:0;
-$margin: 0;
 
 
+
+*{
+    margin: $margin;
+    padding: $padding;
+    box-sizing: border-box;
+}
+
+a:hover{
+    color: $color-primario;
+}
+
+.fixed-top{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 20px;
+
+}
+
+body{
+    display: flex;
+    flex-direction: $columnas;
+    font-family: $fuente;
+    padding-top: 8em;
+}
+
+nav{
+    box-shadow: $sombreado;
+   
+}
+
+.contenedor-nav{
+    
+    display:flex;
+    flex-wrap: inherit;
+    align-items: $centrar;
+    justify-content: space-between;
+}
+
+.logo-nav{
+    width: 100px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 10px;
+    padding: 15px;
+}
+.titulos{
+    display: flex ;
+    flex-grow: 1;
+    align-items: $centrar;
+}
+
+.menu-bar{
+    display: flex;
+    align-items: $centrar;   
+    justify-content: $centrar ;
+    width: $ancho;
+    font-size: 20px;
+    
+ }
+
+.menu-link{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    color: $color-secundario;
+    font-size: 30px;
+    padding: 20px; 
+}
+
+.links{
+    margin: 0 70px 0 70px ;
+}
+
+
+
+
+.zapatillas{
+    width: 300px;
+    height: 300px;
+}
+
+.tienda-productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 25px;
+    padding: 0 10px 25px;
+    
+
+    div{
+        display: flex;
+        flex-direction: $columnas;
+        padding: 15px;
+        box-shadow: $sombreado;
+    }
+
+    span{
+        font-weight: $grosor-letra;
+        font-size: 15px;
+    }
+
+    a{
+        color: $color-secundario;
+        background-color: $color-primario;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: $centrar;
+        font-weight: $grosor-letra;
+    }
+    
+}
+
+
+
+footer{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding: 15px 20px 20px;
+   align-items: $centrar;
+   justify-items: $centrar;
+   background-color: $color-secundario;
+   color: $white;
+   flex-direction: $columnas;
+    margin-top: 10px;
+
+    div{
+        padding: 10px 5px;
+        margin: auto;
+      
+    }
+
+    p{
+        text-align: $centrar;
+        margin: $margin;
+    }
+}
+
+.footer-contacto{
+    display: flex;
+    align-items: $centrar;
+    justify-content: $centrar;
+
+}
+
+.telefono-img{
+    width: 30px;
+}
+
+.email-img{
+    width: 50px;
+}
+
+
+img{
+    vertical-align: middle;
+}
+
+.redes-logo{
+    width: 70px;
+    padding: 10px;
+   
+}
+
+.redes-container{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: $centrar;
+   
+}
+
+.linkedin-logo{
+    width: 30px;
+}
+
+
+
+ .logo-footer{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+ }
+
+.contacto{
+    
+    min-height: 85vh;
+    display: flex;
+
+    input{
+        padding: 10px 0;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid $color-primario;
+    }
+
+    form{
+        display: flex;
+        flex-direction: $columnas;
+    }
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin:auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+
+
+
+ .boton{
+    background-color:$color-primario;
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.nosotros{
+    text-align: justify;
+    min-height: 90vh;
+    h3{
+        color:$color-secundario ;
+        text-align: $centrar;
+        padding: 20px 0 10px;
+        font-size: 50px;
+    }
+    p{
+        margin: 40px;
+        font-size: 20px;
+      
+    }
+}
+
+.slogan{   
+    display: flex;
+    justify-content: $centrar;
+    align-items: $centrar;
+    img{
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+
+    }
+}
+
+
+.Menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    min-height: 70vh;
+
+    div{
+        position: relative;
+        overflow: hidden;
+        margin-top: 5px;
+        height: $ancho;
+    }
+
+    img{
+        width: $ancho;
+        height: $ancho;
+        object-fit: cover;
+    
+    }
+
+    
+
+    p{
+        color: $white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: $grosor-letra;
+        
+    }
+}
+
+
+
+.Menu div a div{
+    width: $ancho;
+    height: $ancho;
+    position: absolute;
+    top: 0;
+    margin-top: $margin;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: $centrar;
+    justify-content: $centrar;
+    
+}
+
+
+
+.menu-principal{
+    display: flex;
+    text-align: $centrar;
+    justify-items: $centrar;
+    align-items: $centrar;
+    margin: 20px;
+    
+}
+
+.titulo-principal{
+    
+    margin: 20px 0 20px 0;
+    color: $color-secundario;
+    text-align: $centrar; 
+    font-size: 40px;
+    font-weight: $grosor-letra;
+   
+}
+
+
+
+.coleccion-contenido{
+    display: flex;
+    flex-direction: $columnas;
+}
+
+.coleccion{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    text-align: justify;
+    align-items:$centrar;
+    padding: $padding;
+  
+}
+
+.contenido{
+    padding: 30px 70px 30px 30px;
+    h2{
+        text-align: $centrar;
+        margin-bottom: 30px;
+        font-weight: $grosor-letra;
+    }
+
+    p{
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+.logo-marcas{
+    width: 25%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .titulos{
+        width: $ancho;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: $columnas;
+        height: $ancho;
+        width: $ancho;
+    }
+
+    .Menu{
+        display: flex;
+        flex-direction: $columnas;
+        width: $ancho;
+       
+    }
+    .titulo-principal{
+        width: $ancho;
+    }
+    .redes-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+  .menu-bar{
+    justify-content: right;
+  }
+
+  .zapatillas{
+    width: $ancho;
+  }
+
+  .slogan{
+    img{
+        width: $ancho;
+    }
+  }
+}
+
+
+@media screen and (max-width:1245px) {
+    .links{
+        margin: 0 20px 0 20px;
+    }
+    
+}
+
+
+@media screen and (max-width:768px) {
+    .coleccion{
+        display: flex;
+        flex-direction: $columnas;
+
+    }
+
+    .invertido{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
