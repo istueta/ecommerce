@@ -1,17 +1,392 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @import "medidas";
- *   |         ^^^^^^^^^
- *   '
- *   scss\styles.scss 3:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import \"medidas\";\d\a   \2502          ^^^^^^^^^\a   \2575 \a   scss\\styles.scss 3:9  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a:hover {
+  color: rgba(255, 196, 0, 0.92);
+}
+
+.fixed-top {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+  font-family: montserrat, sans-serif;
+  padding-top: 8em;
+}
+
+nav {
+  box-shadow: 0px 3px 17px -4px grey;
+}
+
+.contenedor-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: inherit;
+}
+
+.logo-nav {
+  width: 100px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 10px;
+  padding: 15px;
+}
+
+.titulos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.menu-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.links {
+  margin: 0 70px 0 70px;
+}
+
+.zapatillas {
+  width: 300px;
+  height: 300px;
+}
+
+.tienda-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 10px 25px;
+}
+.tienda-productos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+  margin: 0;
+  padding: 15px;
+  box-shadow: 0px 3px 17px -4px grey;
+}
+.tienda-productos span {
+  font-weight: 800;
+  font-size: 15px;
+}
+.tienda-productos a {
+  margin: 0;
+  padding: 10px;
+  color: black;
+  background-color: rgba(255, 196, 0, 0.92);
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+
+footer {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px 20px 20px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+}
+footer div {
+  padding: 10px 5px;
+  margin: auto;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.telefono-img {
+  width: 30px;
+}
+
+.email-img {
+  width: 50px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.redes-logo {
+  width: 70px;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+}
+
+.redes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkedin-logo {
+  width: 30px;
+  height: auto;
+}
+
+.logo-footer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.contacto {
+  min-height: 85vh;
+  display: flex;
+}
+.contacto input {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 196, 0, 0.92);
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+.boton {
+  background-color: rgba(255, 196, 0, 0.92);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nosotros {
+  text-align: justify;
+  min-height: 90vh;
+}
+.nosotros p {
+  margin: 40px;
+  font-size: 20px;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.slogan img {
+  width: 600px;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+}
+
+.Menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  min-height: 70vh;
+}
+.Menu div {
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+  height: 100%;
+}
+.Menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Menu p {
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.Menu div a div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  padding: 0;
+}
+
+.titulo-principal {
+  margin: 20px 0 20px 0;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.coleccion-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coleccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: start;
+  text-align: justify;
+  align-items: center;
+}
+
+.contenido {
+  padding: 30px 70px 30px 30px;
+}
+.contenido h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+.contenido p {
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+}
+
+.logo-marcas {
+  width: 25%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .titulos {
+    width: 100%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .Menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: normal;
+    width: 100%;
+  }
+  .titulo-principal {
+    width: 100%;
+  }
+  .redes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-bar {
+    justify-content: right;
+  }
+  .zapatillas {
+    width: 100%;
+  }
+  .slogan img {
+    width: 100%;
+  }
+  .coleccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .invertido {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenido {
+    margin: 0;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 1245px) {
+  .links {
+    margin: 0 20px 0 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

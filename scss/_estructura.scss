@@ -2,8 +2,7 @@
 
 
 *{
-    margin: $margin;
-    padding: $padding;
+    @include espacio(0,0);
     box-sizing: border-box;
 }
 
@@ -21,8 +20,7 @@ a:hover{
 }
 
 body{
-    display: flex;
-    flex-direction: $columnas;
+    @include display(flex,column,flex-start,normal);
     font-family: $fuente;
     padding-top: 8em;
 }
@@ -34,10 +32,9 @@ nav{
 
 .contenedor-nav{
     
-    display:flex;
+   @include display(flex,row,space-between,center);
     flex-wrap: inherit;
-    align-items: $centrar;
-    justify-content: space-between;
+   
 }
 
 .logo-nav{
@@ -48,23 +45,20 @@ nav{
     padding: 15px;
 }
 .titulos{
-    display: flex ;
+    @include display(flex,row,flex-start,center);
     flex-grow: 1;
-    align-items: $centrar;
+    
 }
 
 .menu-bar{
-    display: flex;
-    align-items: $centrar;   
-    justify-content: $centrar ;
+    @include flex-column-center;
     width: $ancho;
     font-size: 20px;
     
  }
 
 .menu-link{
-    display: flex;
-    justify-content: end;
+    @include display(flex,row,end,center);
     text-decoration: none;
     color: $color-secundario;
     font-size: 30px;
@@ -79,8 +73,7 @@ nav{
 
 
 .zapatillas{
-    width: 300px;
-    height: 300px;
+   @include sizes(300px,300px);
 }
 
 .tienda-productos{
@@ -91,9 +84,8 @@ nav{
     
 
     div{
-        display: flex;
-        flex-direction: $columnas;
-        padding: 15px;
+        @include display(flex,column,flex-start,normal);
+        @include espacio(0,15px);
         box-shadow: $sombreado;
     }
 
@@ -103,10 +95,10 @@ nav{
     }
 
     a{
+        @include espacio(0,10px);
         color: $color-secundario;
         background-color: $color-primario;
         text-decoration: none;
-        padding: 10px;
         border-radius: 5px;
         text-align: $centrar;
         font-weight: $grosor-letra;
@@ -117,14 +109,11 @@ nav{
 
 
 footer{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   padding: 15px 20px 20px;
-   align-items: $centrar;
-   justify-items: $centrar;
-   background-color: $color-secundario;
-   color: $white;
-   flex-direction: $columnas;
+    @include display(grid,column,center,center);
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 20px 20px;
+    background-color: $color-secundario;
+    color: $white;
     margin-top: 10px;
 
     div{
@@ -134,16 +123,14 @@ footer{
     }
 
     p{
+        @include espacio(0,0);
         text-align: $centrar;
-        margin: $margin;
+        
     }
 }
 
 .footer-contacto{
-    display: flex;
-    align-items: $centrar;
-    justify-content: $centrar;
-
+    @include display(flex,row,center,center);
 }
 
 .telefono-img{
@@ -160,27 +147,24 @@ img{
 }
 
 .redes-logo{
-    width: 70px;
-    padding: 10px;
+    @include sizes(70px,auto);
+    @include espacio(0,10px); 
    
 }
 
 .redes-container{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: $centrar;
+    @include display(flex,row,space-between,center);
    
 }
 
 .linkedin-logo{
-    width: 30px;
+    @include sizes(30px,auto);
 }
 
 
 
  .logo-footer{
-    width: 80px;
-    height: 80px;
+    @include sizes(80px,80px);
     border-radius: 50%;
     
  }
@@ -198,8 +182,7 @@ img{
     }
 
     form{
-        display: flex;
-        flex-direction: $columnas;
+       @include display(flex,column,flex-start,normal);
     }
 }
 
@@ -227,12 +210,7 @@ img{
 .nosotros{
     text-align: justify;
     min-height: 90vh;
-    h3{
-        color:$color-secundario ;
-        text-align: $centrar;
-        padding: 20px 0 10px;
-        font-size: 50px;
-    }
+   
     p{
         margin: 40px;
         font-size: 20px;
@@ -241,14 +219,10 @@ img{
 }
 
 .slogan{   
-    display: flex;
-    justify-content: $centrar;
-    align-items: $centrar;
+    @include flex-column-center;
     img{
-    width: 600px;
-    margin: 20px;
-    padding: 10px;
-
+    @include sizes(600px,auto);
+    @include espacio(20px,10px);
     }
 }
 
@@ -267,8 +241,7 @@ img{
     }
 
     img{
-        width: $ancho;
-        height: $ancho;
+        @include sizes(100%,100%);
         object-fit: cover;
     
     }
@@ -287,26 +260,21 @@ img{
 
 
 .Menu div a div{
-    width: $ancho;
-    height: $ancho;
+    @include flex-column-center;
+    @include sizes(100%,100%);
     position: absolute;
     top: 0;
-    margin-top: $margin;
+    margin-top: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: $centrar;
-    justify-content: $centrar;
+    
     
 }
 
 
 
 .menu-principal{
-    display: flex;
-    text-align: $centrar;
-    justify-items: $centrar;
-    align-items: $centrar;
-    margin: 20px;
+    @include flex-column-center;
+    @include espacio(20px,0);
     
 }
 
@@ -323,17 +291,16 @@ img{
 
 
 .coleccion-contenido{
-    display: flex;
-    flex-direction: $columnas;
+    @include display(flex,column,center,center);
 }
 
 .coleccion{
-    display: flex;
+    @include display(flex,row,center,center);
+    @include espacio(0,0,);
     justify-content: start;
-    flex-direction: row;
     text-align: justify;
     align-items:$centrar;
-    padding: $padding;
+    
   
 }
 
@@ -347,7 +314,7 @@ img{
 
     p{
         font-size: 20px;
-        padding: 10px;
+        @include espacio(0,10px);
     }
 }
 
@@ -367,15 +334,12 @@ img{
     }
     
     footer{
-        display: flex;
-        flex-direction: $columnas;
-        height: $ancho;
-        width: $ancho;
+        @include display(flex,column,center,center);
+        @include sizes(100%,100%);
     }
 
     .Menu{
-        display: flex;
-        flex-direction: $columnas;
+        @include display(flex,column,flex-start,normal);
         width: $ancho;
        
     }
@@ -383,8 +347,7 @@ img{
         width: $ancho;
     }
     .redes-container{
-        display: flex;
-        justify-content: space-between;
+        @include display(flex,row,space-between,center);
     }
 
   .menu-bar{
@@ -399,7 +362,21 @@ img{
     img{
         width: $ancho;
     }
-  }
+    }
+
+    .coleccion{ 
+        @include display(flex,column,center,center);
+    }
+    
+
+    .invertido{
+        @include display(flex,column-reverse,center,center);
+    }
+
+    .contenido{
+        @include espacio(0,30px);
+    }
+   
 }
 
 
@@ -411,15 +388,4 @@ img{
 }
 
 
-@media screen and (max-width:768px) {
-    .coleccion{
-        display: flex;
-        flex-direction: $columnas;
 
-    }
-
-    .invertido{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}

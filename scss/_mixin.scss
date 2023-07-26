@@ -1,0 +1,28 @@
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@mixin display($flex,$direction,$contenido,$items){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $contenido;
+    align-items: $items;
+}
+
+@mixin espacio($margin,$padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin sizes($width,$height){
+    width:$width;
+    height:$height;
+
+}
+
+
