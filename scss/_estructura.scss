@@ -106,7 +106,23 @@ nav{
     
 }
 
+.tienda-destacados{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    
+    
+}
 
+.zapatillas-destacadas{
+    @include sizes(300px,auto);
+    padding: 10px
+    
+}
+
+.carrusel{
+    @include display(flex,row,center,center);
+}
 
 footer{
     @include display(grid,column,center,center);
@@ -201,11 +217,26 @@ img{
  .boton{
     background-color:$color-primario;
     color: $white;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
 }
 
 
+@keyframes glowing{
+    0%{
+        background-position: 0 0;
+    }
+
+    50%{
+        background-position:400% 0;
+    }
+
+    100%{
+        background-position: 0 0;
+    }
+}
 
 .nosotros{
     text-align: justify;
@@ -232,20 +263,21 @@ img{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     min-height: 70vh;
+    
 
     div{
         position: relative;
         overflow: hidden;
         margin-top: 5px;
         height: $ancho;
+        
     }
 
     img{
         @include sizes(100%,100%);
         object-fit: cover;
-    
+        
     }
-
     
 
     p{
@@ -292,7 +324,10 @@ img{
 
 .coleccion-contenido{
     @include display(flex,column,center,center);
+   
 }
+
+
 
 .coleccion{
     @include display(flex,row,center,center);
@@ -377,6 +412,13 @@ img{
    
     .zapatillas{
         @include sizes(350px,auto);
+    }
+
+    .carrusel{
+        margin: 0px 60px;
+        img{
+            @include sizes(250px,auto);
+        }
     }
 }
 

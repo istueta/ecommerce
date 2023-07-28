@@ -113,6 +113,25 @@ nav {
   font-weight: 800;
 }
 
+.tienda-destacados {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.zapatillas-destacadas {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   display: grid;
   flex-direction: column;
@@ -207,10 +226,23 @@ img {
 .boton {
   background-color: rgba(255, 196, 0, 0.92);
   color: white;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
 }
 
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .nosotros {
   text-align: justify;
   min-height: 90vh;
@@ -381,6 +413,13 @@ img {
   }
   .zapatillas {
     width: 350px;
+    height: auto;
+  }
+  .carrusel {
+    margin: 0px 60px;
+  }
+  .carrusel img {
+    width: 250px;
     height: auto;
   }
 }
